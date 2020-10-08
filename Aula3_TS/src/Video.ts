@@ -4,7 +4,7 @@ interface IProps {
   message: string;
 }
 
-interface sourceElements {
+interface ISourceElements {
   src: string;
   type: string;
 }
@@ -13,7 +13,7 @@ class CustomPlayer {
   width: number;
   height: number;
   message: string;
-  sources: sourceElements[];
+  sources: ISourceElements[];
 
   constructor({ width, height, message }: IProps) {
     this.width = width || 400;
@@ -22,7 +22,7 @@ class CustomPlayer {
     this.sources = [];
   }
 
-  setSources(sources: sourceElements[]) {
+  setSources(sources: ISourceElements[]) {
     this.sources = sources;
   }
 
