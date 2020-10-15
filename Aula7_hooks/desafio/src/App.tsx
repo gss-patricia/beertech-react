@@ -36,8 +36,8 @@ const App = () => {
   };
 
   const getAllAnimals = () => {
-    let allAnimals = owners.map(async (guy) => {
-      return await animalsConstructor.getByOwnerId(guy.id);
+    let allAnimals = owners.map((guy) => {
+      return animalsConstructor.getByOwnerId(guy.id);
     });
     Promise.all(allAnimals).then((animals) => setAllAnimals(animals));
   };
